@@ -1,0 +1,6 @@
+{
+  "name": "Sprout 2.0",
+  "description": "Calm, grounded wealth building and mindful long-term investing for modern retail investors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

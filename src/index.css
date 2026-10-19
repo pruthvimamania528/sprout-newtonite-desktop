@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00513c;
+  --color-primary-container: #176b52;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #9be9c9;
+  --color-primary-fixed: #a4f2d2;
+  --color-primary-fixed-dim: #89d6b7;
+  --color-on-primary-fixed: #002116;
+  --color-on-primary-fixed-variant: #00513c;
+  
+  --color-secondary: #536600;
+  --color-secondary-container: #ceec64;
+  --color-secondary-fixed: #d1ef67;
+  --color-secondary-fixed-dim: #b6d24d;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #576a00;
+  --color-on-secondary-fixed: #171e00;
+  --color-on-secondary-fixed-variant: #3e4c00;
+
+  --color-tertiary: #414843;
+  --color-tertiary-container: #58605b;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #d2dad3;
+
+  --color-surface: #f2fcf2;
+  --color-surface-dim: #d3ddd3;
+  --color-surface-bright: #f2fcf2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #ecf6ed;
+  --color-surface-container: #e6f1e7;
+  --color-surface-container-high: #e1ebe1;
+  --color-surface-container-highest: #dbe5dc;
+  --color-surface-variant: #dbe5dc;
+  --color-surface-tint: #176b52;
+
+  --color-on-surface: #151e18;
+  --color-on-surface-variant: #3f4944;
+  --color-inverse-surface: #29332c;
+  --color-inverse-on-surface: #e9f3ea;
+  --color-inverse-primary: #89d6b7;
+
+  --color-outline: #6f7974;
+  --color-outline-variant: #bec9c2;
+  --color-background: #f2fcf2;
+  --color-on-background: #151e18;
+
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  body {
+    background-color: #f2fcf2;
+    color: #151e18;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Explicit Spacing Tokens matching Stitch */
+:root {
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --gutter: 1rem;
+  --gutter-desktop: 1.5rem;
+  --margin: 1.5rem;
+  --margin-desktop: 3rem;
+}
+
+/* Spacing utility classes */
+.gap-space-xs { gap: var(--space-xs); }
+.gap-space-sm { gap: var(--space-sm); }
+.gap-space-md { gap: var(--space-md); }
+.gap-space-lg { gap: var(--space-lg); }
+.gap-space-xl { gap: var(--space-xl); }
+.gap-space-2xl { gap: var(--space-2xl); }
+
+.p-space-xs { padding: var(--space-xs); }
+.p-space-sm { padding: var(--space-sm); }
+.p-space-md { padding: var(--space-md); }
+.p-space-lg { padding: var(--space-lg); }
+.p-space-xl { padding: var(--space-xl); }
+.p-space-2xl { padding: var(--space-2xl); }
+
+.px-space-md { padding-left: var(--space-md); padding-right: var(--space-md); }
+.px-space-lg { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+.px-space-xl { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+.px-gutter-desktop { padding-left: var(--gutter-desktop); padding-right: var(--gutter-desktop); }
+
+.py-space-xs { padding-top: var(--space-xs); padding-bottom: var(--space-xs); }
+.py-space-sm { padding-top: var(--space-sm); padding-bottom: var(--space-sm); }
+.py-space-md { padding-top: var(--space-md); padding-bottom: var(--space-md); }
+.py-space-lg { padding-top: var(--space-lg); padding-bottom: var(--space-lg); }
+.py-space-xl { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.py-space-2xl { padding-top: var(--space-2xl); padding-bottom: var(--space-2xl); }
+
+.pt-space-xs { padding-top: var(--space-xs); }
+.pt-space-sm { padding-top: var(--space-sm); }
+.pt-space-md { padding-top: var(--space-md); }
+.pt-space-lg { padding-top: var(--space-lg); }
+.pt-space-xl { padding-top: var(--space-xl); }
+.pt-space-2xl { padding-top: var(--space-2xl); }
+
+.pb-space-xs { padding-bottom: var(--space-xs); }
+.pb-space-sm { padding-bottom: var(--space-sm); }
+.pb-space-md { padding-bottom: var(--space-md); }
+.pb-space-lg { padding-bottom: var(--space-lg); }
+.pb-space-xl { padding-bottom: var(--space-xl); }
+.pb-space-2xl { padding-bottom: var(--space-2xl); }
+
+.mb-space-xs { margin-bottom: var(--space-xs); }
+.mb-space-sm { margin-bottom: var(--space-sm); }
+.mb-space-md { margin-bottom: var(--space-md); }
+.mb-space-lg { margin-bottom: var(--space-lg); }
+.mb-space-xl { margin-bottom: var(--space-xl); }
+.mb-space-2xl { margin-bottom: var(--space-2xl); }
+
+.mt-space-xs { margin-top: var(--space-xs); }
+.mt-space-sm { margin-top: var(--space-sm); }
+.mt-space-md { margin-top: var(--space-md); }
+.mt-space-lg { margin-top: var(--space-lg); }
+.mt-space-xl { margin-top: var(--space-xl); }
+.mt-space-2xl { margin-top: var(--space-2xl); }
+
+.space-y-space-xs > :not([hidden]) ~ :not([hidden]) { margin-top: var(--space-xs); }
+.space-y-space-sm > :not([hidden]) ~ :not([hidden]) { margin-top: var(--space-sm); }
+.space-y-space-md > :not([hidden]) ~ :not([hidden]) { margin-top: var(--space-md); }
+.space-y-space-lg > :not([hidden]) ~ :not([hidden]) { margin-top: var(--space-lg); }
+.space-y-space-xl > :not([hidden]) ~ :not([hidden]) { margin-top: var(--space-xl); }
+
+.top-space-md { top: var(--space-md); }
+.right-space-md { right: var(--space-md); }
+
+/* Typography Scale */
+.font-display-hero {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .font-display-hero {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+  }
+}
+
+.font-headline-lg {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .font-headline-lg {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -0.01em;
+  }
+}
+
+.font-headline-md {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-headline-sm {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+
+.font-title-md {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0em;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.font-label-lg {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+.font-label-md {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.font-label-sm {
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* Color fallback utilities to guarantee 100% theme match */
+.bg-surface { background-color: #f2fcf2; }
+.bg-surface-container-lowest { background-color: #ffffff; }
+.bg-surface-container-low { background-color: #ecf6ed; }
+.bg-surface-container { background-color: #e6f1e7; }
+.bg-surface-container-high { background-color: #e1ebe1; }
+.bg-surface-container-highest { background-color: #dbe5dc; }
+.bg-primary { background-color: #00513c; }
+.bg-primary-container { background-color: #176b52; }
+.bg-secondary-container { background-color: #ceec64; }
+.bg-secondary-fixed { background-color: #d1ef67; }
+.bg-secondary-fixed-dim { background-color: #b6d24d; }
+.bg-inverse-surface { background-color: #29332c; }
+
+.text-primary { color: #00513c; }
+.text-on-primary { color: #ffffff; }
+.text-on-primary-container { color: #9be9c9; }
+.text-secondary-fixed { color: #d1ef67; }
+.text-on-secondary-container { color: #576a00; }
+.text-on-surface { color: #151e18; }
+.text-on-surface-variant { color: #3f4944; }
+.text-tertiary { color: #414843; }
+
+.hover\:bg-primary:hover { background-color: #00513c; }
+.hover\:bg-surface-container:hover { background-color: #e6f1e7; }
+.hover\:bg-surface-container-high:hover { background-color: #e1ebe1; }
+.hover\:bg-secondary-fixed:hover { background-color: #d1ef67; }
